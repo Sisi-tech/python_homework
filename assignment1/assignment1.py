@@ -7,7 +7,7 @@ print_hello()
 
 # Task 2: Greet with a Formatted String
 def greet(name):
-    print("Hello ", + name.toUppercase() + "!")
+    print("Hello " + name.upper() + "!")
 
 greet("Jean")
 
@@ -110,6 +110,56 @@ print(student_scores("best", Alice=92, Bob=87, Charlie=78))
 print(student_scores("mean", Alice=92, Bob=87, Charlie=78))  
 print(student_scores("top", Alice=92, Bob=87))                
 print(student_scores("best")) 
+
+# Task 8: Titleize, with String and List Operations
+def titleize(text):
+    little_words = ["a", "on", "an", "the", "of", "and", "is", "in"]
+    words = text.lower().split()
+
+    result = []
+    for i, word in enumerate(words):
+        if i == 0 or i == len(words) - 1 or word not in little_words:
+            result.append(word.capitalize())
+        else:
+            result.append(word)
+
+    return " ".join(result)
+
+# Task 9: Hangman, with more String Operations
+def hangman(secret, guess):
+    result = ""
+    for letter in secret:
+        if letter in guess:
+            result += letter
+        else:
+            result += "_"
+    return result
+
+# Task 10: Pig Latin, Another String Manipulation Exercise
+def pig_latin(text):
+    vowels = "aeiou"
+    words = text.split()
+    result = []
+
+    for word in words:
+        if word.startswith("qu"):
+            # Move "qu" to the end
+            pig_word = word[2:] + "quay"
+        elif word[0] in vowels:
+            # Starts with a vowel
+            pig_word = word + "ay"
+        else:
+            # Starts with one or more consonants
+            index = 0
+            while index < len(word) and word[index] not in vowels:
+                if word[index] == 'q' and index + 1 < len(word) and word[index + 1] == 'u':
+                    index += 2
+                    break
+                index += 1
+            pig_word = word[index:] + word[:index] + "ay"
+        result.append(pig_word)
+
+    return " ".join(result)
 
 
 
