@@ -1,13 +1,13 @@
 # Write your code here.
 # Task 1: Hello
 def print_hello():
-    print("Hello!")
+    return "Hello!"
 
 print_hello()
 
 # Task 2: Greet with a Formatted String
 def greet(name):
-    print("Hello " + name.upper() + "!")
+    return "Hello " + name + "!"
 
 greet("Jean")
 
@@ -74,7 +74,10 @@ def data_type_conversion(value, data_type):
         return f"You can't convert {value} into a {data_type}."
 # Task 5: Grading system, using *args
 def grade(*args):
-    average = sum(args) / len(args)
+    try: 
+        average = sum(args) / len(args)
+    except:
+        return "Invalid data was provided."
     if average >= 90:
         return "A"
     elif average >= 80:
@@ -84,7 +87,8 @@ def grade(*args):
     elif average >= 60:
         return "D"
     else:
-        return "Below 60"
+        return "F"
+   
     
 # Task 6: Use a for loop with a range
 def repeat(string, count):
