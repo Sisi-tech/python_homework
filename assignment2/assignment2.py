@@ -1,4 +1,4 @@
-# Re-push assignment2. Didn't push assignment2 successfully last time.
+# Re-push assignment2 - Didn't push assignment2 successfully last time.
 # Task 2: Read a CSV File
 import csv
 import sys 
