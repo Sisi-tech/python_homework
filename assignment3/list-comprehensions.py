@@ -14,5 +14,8 @@ full_names = [row[0] + " " + row[1] for row in data[1:]]
 print("All employees' name:")
 print(full_names)
 
+names_with_e = [name for name in full_names if "e" in name.lower()]
+print("Print names with e:")
+print(names_with_e)
 
 
