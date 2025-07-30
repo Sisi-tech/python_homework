@@ -1,0 +1,30 @@
+function: greet
+positional parameters: none
+keyword parameters: none
+return: Hello, World!
+
+function: return_true
+positional parameters: ('a', 'b')
+keyword parameters: none
+return: True
+
+function: return_decorator
+positional parameters: none
+keyword parameters: {'name': 'Someone', 'location': 'NY', 'language': 'Python'}
+return: <function logger_decorator at 0x100d20400>
+
+function: greet
+positional parameters: none
+keyword parameters: none
+return: Hello, World!
+
+function: return_true
+positional parameters: ('a', 'b')
+keyword parameters: none
+return: True
+
+function: return_decorator
+positional parameters: none
+keyword parameters: {'name': 'Someone', 'location': 'NY', 'language': 'Python'}
+return: <function logger_decorator at 0x104dcc400>
+
