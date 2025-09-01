@@ -1,0 +1,2 @@
+one challenge was identifying the correct XPath to extract the top 10 items.
+solved it by filtering with contains(@href) and limiting to the first 10 

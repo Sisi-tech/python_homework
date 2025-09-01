@@ -1,0 +1,11 @@
+Restricted sections:
+- /w/
+- /wiki/Special:
+- /api/
+
+Specific rules for user agents:
+- User-agent: * has the main restrictions
+- Some rules allow specific paths (like /w/load.php) for all agents
+
+Reflection:
+Websites use robots.txt to set guidelines for web crawlers. It helps manage server traffic and protect sensitive areas of the site. Following robots.txt promotes ethical scraping by respecting the website owner’s intentions and ensuring fair use of resources.
